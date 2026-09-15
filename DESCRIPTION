@@ -1,11 +1,14 @@
 Package: montyhall
-Title: What the Package Does (One Line, Title Case)
+Title: Simulate the Monty Hall Problem
 Version: 0.0.0.9000
 Authors@R: 
     person("Mariana", "Ozaeta", , "mozaeta12@gmail.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+Description: Builds and plays the Monty Hall Problem game. The package
+    creates a game, walks through each step of play, and simulates many
+    games to compare the stay and switch strategies.
+Depends:
+    dplyr
+License: GPL-3
 Config/roxygen2/version: 8.1.0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
