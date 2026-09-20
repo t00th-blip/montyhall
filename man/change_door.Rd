@@ -26,11 +26,9 @@ decide to stay with their first door or switch to the other
 closed door.
 }
 \details{
-Two doors are still closed once the host reveals a goat: the
-contestant's door and one other. Staying keeps the first pick.
-Switching moves to the door that is not the first pick and not
-the door the host opened, and there is only one of those, so
-nothing is random here.
+Two doors are still closed after the host reveals a goat. Staying
+keeps the first pick, and switching moves to the other closed
+door.
 }
 \examples{
   this.game <- create_game()
