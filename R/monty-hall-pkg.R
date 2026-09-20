@@ -42,10 +42,8 @@ create_game <- function()
 #'   contestant's first guess.
 #'
 #' @details
-#'   The contestant picks a door before the host has opened anything,
-#'   so it is just a guess. All three doors are equally likely, which
-#'   means there is a 1 in 3 chance of picking the car and a 2 in 3
-#'   chance of picking a goat.
+#'   The contestant picks before the host opens anything, so it is
+#'   just a guess. There is a 1 in 3 chance of picking the car.
 #'
 #' @param ... no arguments are used by the function.
 #'
@@ -169,9 +167,8 @@ change_door <- function( stay=T, opened.door, a.pick )
 #'
 #' @details
 #'   The contestant wins if the car is behind their final door and
-#'   loses if a goat is. This is the step that scores one play of the
-#'   game, and it is used for both the stay pick and the switch pick
-#'   so the two strategies can be compared on the same game.
+#'   loses if a goat is. The same function scores the stay pick and
+#'   the switch pick.
 #'
 #' @param final.pick a number between 1 and 3 from `change_door()`
 #'   giving the contestant's final door.
@@ -214,12 +211,9 @@ determine_winner <- function( final.pick, game )
 #'   outcome for staying and the outcome for switching.
 #'
 #' @details
-#'   The function runs all of the steps in order: it creates a game,
-#'   makes a first pick, opens a goat door, then finds the final pick
-#'   for staying and for switching and scores both. Both strategies
-#'   are run on the same game with the same first pick, so the two
-#'   outcomes can be compared directly. Only one of them can win a
-#'   given game.
+#'   The function runs all the steps in order and scores the final
+#'   pick for staying and for switching. Both use the same game and
+#'   the same first pick, so only one of them can win.
 #'
 #' @param ... no arguments are used by the function.
 #'
@@ -264,12 +258,10 @@ play_game <- function( )
 #'   strategy.
 #'
 #' @details
-#'   One game does not tell you much because only one strategy can
-#'   win it, so the function loops through many games and collects
-#'   the results in a list before binding them into one data frame.
-#'   The row proportions of that table are the win rates, and the
-#'   more games you run the closer they get to about 0.33 for staying
-#'   and 0.67 for switching.
+#'   One game is not enough to tell which strategy is better, so this
+#'   loops through the game many times and stacks all the results. The
+#'   more games you run, the closer the win rates get to 0.33 for stay
+#'   and 0.67 for switch.
 #'
 #' @param n a number giving how many games to play. Defaults to 100.
 #'
