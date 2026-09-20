@@ -19,12 +19,8 @@ columns. The \code{strategy} column is "stay" and "switch" and the
 outcome for staying and the outcome for switching.
 }
 \details{
-The function runs all of the steps in order: it creates a game,
-makes a first pick, opens a goat door, then finds the final pick
-for staying and for switching and scores both. Both strategies
-are run on the same game with the same first pick, so the two
-outcomes can be compared directly. Only one of them can win a
-given game.
+The function runs all the steps in order and scores the final pick for staying and for switching.
+Both use the same game and the same first pick, so only one of them can win.
 }
 \examples{
   play_game()
