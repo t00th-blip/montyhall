@@ -23,7 +23,8 @@ reports whether they won the car or got a goat.
 }
 \details{
 The contestant wins if the car is behind their final door and
-loses if a goat is. The same function scores the stay pick and the switch pick.
+loses if a goat is. The same function scores the stay pick and
+the switch pick.
 }
 \examples{
   this.game <- create_game()

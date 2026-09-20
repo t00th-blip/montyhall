@@ -15,19 +15,16 @@ giving the door the contestant picked.}
 }
 \value{
 The function returns a number between 1 and 3 indicating
-the door the host opened. It is always a goat door and never the
-contestant's door.
+the door the host opened.
 }
 \description{
 \code{open_goat_door()} opens one of the doors the contestant did not
 pick to reveal a goat.
 }
 \details{
-The host knows where the car is, so he never opens the car door
-and never opens the contestant's door. If the contestant picked
-the car then both other doors have goats and the host opens one
-of them at random. If the contestant picked a goat then there is
-only one goat door left to open, so the host has no choice.
+The host never opens the car door or the contestant's door. If
+the contestant picked the car he opens either goat door, and if
+they picked a goat there is only one left to open.
 }
 \examples{
   this.game <- create_game()

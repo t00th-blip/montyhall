@@ -19,8 +19,9 @@ columns. The \code{strategy} column is "stay" and "switch" and the
 outcome for staying and the outcome for switching.
 }
 \details{
-The function runs all the steps in order and scores the final pick for staying and for switching.
-Both use the same game and the same first pick, so only one of them can win.
+The function runs all the steps in order and scores the final
+pick for staying and for switching. Both use the same game and
+the same first pick, so only one of them can win.
 }
 \examples{
   play_game()
