@@ -73,11 +73,9 @@ select_door <- function( )
 #'   pick to reveal a goat.
 #'
 #' @details
-#'   The host knows where the car is, so he never opens the car door
-#'   and never opens the contestant's door. If the contestant picked
-#'   the car then both other doors have goats and the host opens one
-#'   of them at random. If the contestant picked a goat then there is
-#'   only one goat door left to open, so the host has no choice.
+#'   The host never opens the car door or the contestant's door. If
+#'   the contestant picked the car he opens either goat door, and if
+#'   they picked a goat there is only one left to open.
 #'
 #' @param game a length 3 character vector from `create_game()` with
 #'   "goat", "goat", and "car" in a random order.
@@ -85,8 +83,7 @@ select_door <- function( )
 #'   giving the door the contestant picked.
 #'
 #' @return The function returns a number between 1 and 3 indicating
-#'   the door the host opened. It is always a goat door and never the
-#'   contestant's door.
+#'   the door the host opened.
 #'
 #' @examples
 #'   this.game <- create_game()
@@ -122,11 +119,9 @@ open_goat_door <- function( game, a.pick )
 #'   closed door.
 #'
 #' @details
-#'   Two doors are still closed once the host reveals a goat: the
-#'   contestant's door and one other. Staying keeps the first pick.
-#'   Switching moves to the door that is not the first pick and not
-#'   the door the host opened, and there is only one of those, so
-#'   nothing is random here.
+#'   Two doors are still closed after the host reveals a goat. Staying
+#'   keeps the first pick, and switching moves to the other closed
+#'   door.
 #'
 #' @param stay a logical value for the strategy. `T` stays with the
 #'   first pick and `F` switches to the other closed door.
