@@ -21,12 +21,10 @@ every game, and prints the share of wins and losses for each
 strategy.
 }
 \details{
-One game does not tell you much because only one strategy can
-win it, so the function loops through many games and collects
-the results in a list before binding them into one data frame.
-The row proportions of that table are the win rates, and the
-more games you run the closer they get to about 0.33 for staying
-and 0.67 for switching.
+One game is not enough to tell which strategy is better, so this
+loops through the game many times and stacks all the results. The
+more games you run, the closer the win rates get to 0.33 for stay
+and 0.67 for switch.
 }
 \examples{
   results <- play_n_games( n=100 )
