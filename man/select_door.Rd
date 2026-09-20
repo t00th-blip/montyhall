@@ -18,10 +18,8 @@ the door the contestant picked.
 contestant's first guess.
 }
 \details{
-The contestant picks a door before the host has opened anything,
-so it is just a guess. All three doors are equally likely, which
-means there is a 1 in 3 chance of picking the car and a 2 in 3
-chance of picking a goat.
+The contestant picks before the host opens anything, so it is
+just a guess. There is a 1 in 3 chance of picking the car.
 }
 \examples{
   select_door()
